@@ -1,23 +1,9 @@
-export type Artist = {
-    id: number;
-    name: string;
-    genre: string;
-    [key: string]: any; // Allows for adding other properties
-}
-
-export type Album = {
-    id: number;
-    artistId: number;
-    title: string;
-    releaseYear: number;
-    albumArtUrl: string;
-    genre: string;
-    tracklist: string[];
-    [key: string]: any; // Allows for adding other properties
-}
+import { Artist } from "@/app/api/_data/types";
+import { Album } from "@/app/api/_data/types";
 
 const LOCAL_HOST = "http://localhost:3000/images/album-art";
 
+// Do not import this data directly in your code. Only access it through the REST API.
 let DATA: {
     artists: Artist[];
     albums: Album[];

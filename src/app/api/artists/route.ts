@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
-import data from "@/app/api/v1/_data/data";
+import data from "@/app/api/_data/data";
+import { addVariance } from "@/app/api/_common";
 
-export function GET(): NextResponse {
+export async function GET(): Promise<NextResponse> {
+    await addVariance();
     return new NextResponse(JSON.stringify(data.artists));
 }
 
