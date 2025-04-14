@@ -16,3 +16,11 @@ export type Album = {
     tracklist: string[];
     [key: string]: any; // Allows for adding other properties
 }
+
+export type Track = {
+    id: string;
+    title: string;
+    position: number;
+    album: Album;
+    [key: string]: any; // Allows for adding other properties
+}
