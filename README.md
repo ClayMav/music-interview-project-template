@@ -46,3 +46,21 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+## Bonus Task: Track Search Functionality
+
+Open the `src/app/track-search/page.tsx` file and implement a track search experience.
+
+Utilize the `tracks` endpoint to power the experience, which accepts a `searchTerm` URL parameter,
+which limits the response to only tracks whose title match the search term.
+
+e.g. http://localhost:3000/api/tracks?searchTerm=love
+
+### Requirements:
+
+- The UI should provide a free-form input for the user to begin typing the name of a track, 
+  and *as they type* start showing them results that match
+- The frontend code should aim to minimize the number of API requests made, but without 
+  sacrificing a responsive experience
+- Plan to spend roughly half of your time implementing the behavior, and the other half
+  styling the displayed results to make them visually appealing and easy to understand
